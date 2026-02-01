@@ -37,7 +37,7 @@ You can use the [Live Demo](https://moneo-finance-dashboard.vercel.app/) immedia
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/recepzgrmh/my-financial-report.git
+    git clone https://github.com/recepzgrmh/moneo-finance-dashboard.git
     cd my-financial-report
     ```
 
