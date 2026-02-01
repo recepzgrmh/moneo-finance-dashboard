@@ -1,0 +1,83 @@
+/* =========================================
+   NEO-BRUTALISM THEME
+   ========================================= */
+[data-theme='neobrutalism'] {
+    --bg-body: #FFDEE9;
+    /* Çiğ pastel pembe/sarı gradyan zemin */
+    --bg-sidebar: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-card-hover: #FDFFAA;
+    /* Hover'da çiğ sarı */
+
+    --primary: #000000;
+    /* Ana renk SİYAH */
+    --secondary: #FF5757;
+    /* Vurgu rengi parlak kırmızı */
+    --success: #00E055;
+    --danger: #FF0000;
+    --warning: #FFBD00;
+
+    --text-main: #000000;
+    --text-muted: #000000;
+    /* Muted bile siyah, sadece font-weight farklı olabilir */
+
+    --border-color: #000000;
+    --glass-shine: transparent;
+
+    /* Hafif köşeli ama sert */
+    --radius-md: 4px;
+    --radius-lg: 8px;
+
+    /* En önemli kısım: Kalın, sert, uzak gölge */
+    --shadow-card: 6px 6px 0px #000000;
+    --shadow-glow: none;
+
+    /* Kaba, bold fontlar */
+    --font-main: 'Arial Black', 'Helvetica Neue', sans-serif;
+}
+
+/* Neo-Brutalism Overrides */
+[data-theme='neobrutalism'] body {
+    /* Arka planı biraz daha rahatsız edici yapalım */
+    background-image: linear-gradient(90deg, #FFDEE9 0%, #B5FFFC 100%);
+}
+
+[data-theme='neobrutalism'] .sidebar,
+[data-theme='neobrutalism'] .stat-card,
+[data-theme='neobrutalism'] .section-card,
+[data-theme='neobrutalism'] .wallet-card,
+[data-theme='neobrutalism'] .btn-glass,
+[data-theme='neobrutalism'] input,
+[data-theme='neobrutalism'] .modal-content {
+    /* Çok kalın siyah çerçeve */
+    border: 3px solid #000000 !important;
+}
+
+[data-theme='neobrutalism'] .stat-card:hover,
+[data-theme='neobrutalism'] .section-card:hover {
+    /* Hover'da gölge daha da uzar */
+    box-shadow: 10px 10px 0px #000000;
+    transform: translate(-2px, -2px);
+    background: var(--bg-card-hover);
+}
+
+[data-theme='neobrutalism'] .btn-glass {
+    background: #ffffff;
+    font-weight: 900;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0px #000000;
+}
+
+[data-theme='neobrutalism'] .btn-glass:hover {
+    background: var(--secondary);
+    color: white;
+    box-shadow: 2px 2px 0px #000000;
+    transform: translate(2px, 2px);
+}
+
+[data-theme='neobrutalism'] .nav-item.active {
+    background: var(--primary);
+    color: white;
+    border: 3px solid black;
+    box-shadow: 4px 4px 0px var(--secondary);
+}

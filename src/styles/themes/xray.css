@@ -1,0 +1,62 @@
+/* =========================================
+   4. X-RAY (RÖNTGEN ODASI)
+   ========================================= */
+[data-theme='xray'] {
+    --bg-body: #000000;
+    --bg-sidebar: #050a14;
+    --bg-card: rgba(10, 30, 50, 0.4);
+    /* Yarı şeffaf */
+    --bg-card-hover: rgba(20, 60, 100, 0.6);
+
+    --primary: #ffffff;
+    --secondary: #00ffff;
+    /* Cyan kemik rengi */
+    --text-main: #e0f0ff;
+    --text-muted: #507090;
+    --border-color: #103050;
+
+    --radius-md: 10px;
+    --shadow-card: 0 0 10px rgba(0, 255, 255, 0.1);
+    --font-main: sans-serif;
+}
+
+/* Röntgen Negatif Efekti */
+[data-theme='xray'] body {
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(0, 255, 255, 0.05) 20px);
+}
+
+[data-theme='xray'] .stat-card,
+[data-theme='xray'] .section-card {
+    backdrop-filter: invert(10%) blur(5px);
+    /* Renkleri hafif ters çevir */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tarayıcı Işık Animasyonu */
+[data-theme='xray'] .stat-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(200, 255, 255, 0.4), transparent);
+    animation: xray-scan 3s infinite linear;
+    pointer-events: none;
+}
+
+@keyframes xray-scan {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 200%;
+    }
+}
+
+[data-theme='xray'] .stat-value {
+    text-shadow: 0 0 5px cyan;
+}

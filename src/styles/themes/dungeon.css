@@ -1,0 +1,72 @@
+/* =========================================
+   8. MEDIEVAL DUNGEON (ZİNDAN RPG)
+   ========================================= */
+[data-theme='dungeon'] {
+    --bg-body: #1a1512;
+    --bg-sidebar: #261f1b;
+    --bg-card: #3e3228;
+    --bg-card-hover: #4a3e32;
+
+    --primary: #b03030;
+    /* Kan Kırmızısı */
+    --secondary: #d4af37;
+    /* Altın */
+    --text-main: #e0d0b0;
+    /* Parşömen rengi */
+    --text-muted: #8a7a6a;
+    --border-color: #5a4a3a;
+
+    --radius-md: 4px;
+    --shadow-card: 5px 5px 15px rgba(0, 0, 0, 0.7);
+    --font-main: 'Cinzel', serif;
+    /* Gotik havası */
+}
+
+/* Taş Duvar Dokusu */
+[data-theme='dungeon'] body {
+    background-image: url("https://www.transparenttextures.com/patterns/black-scales.png");
+}
+
+/* Meşale Işığı Efekti (Flicker) */
+[data-theme='dungeon'] .stat-card {
+    border: 2px solid #5a4a3a;
+    box-shadow: inset 0 0 20px #000;
+    position: relative;
+}
+
+[data-theme='dungeon'] .stat-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(255, 100, 0, 0.1), transparent 70%);
+    animation: torch-flicker 3s infinite;
+    pointer-events: none;
+}
+
+@keyframes torch-flicker {
+
+    0%,
+    100% {
+        opacity: 0.8;
+    }
+
+    25% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+}
+
+[data-theme='dungeon'] .stat-value {
+    color: #d4af37;
+    text-shadow: 2px 2px 0px #000;
+}

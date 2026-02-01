@@ -80,13 +80,20 @@ Visit the **AI Assistant** page to chat with your financial data.
 
 ## 🎨 Style Gallery
 
-Moneo comes with multiple built-in themes to match your mood.
+Moneo comes with an extensive collection of built-in themes to match your mood and aesthetic.
 
-| Cosmic Glass (Default) | Profesyonel (Light) |
+| | |
 |:---:|:---:|
-| ![Default](docs/assets/theme_default.png) | ![Light](docs/assets/theme_light.png) |
-| **Neon Punk** | **Sunset Bliss** |
-| ![Neon](docs/assets/theme_neon.png) | ![Sunset](docs/assets/theme_sunset.png) |
+| **Cosmic Glass**<br>![Cosmic](docs/designs/cosmic_glass.png) | **Professional (Light)**<br>![Professional](docs/designs/professional.png) |
+| **Golden Luxury**<br>![Golden](docs/designs/golden.png) | **Neo-Brutalism**<br>![Neo Brutalism](docs/designs/neo-brut.png) |
+| **Windows XP**<br>![Windows XP](docs/designs/windows_xp.png) | **Terminal (Hacker)**<br>![Terminal](docs/designs/terminal.png) |
+| **Pop Art**<br>![Pop Art](docs/designs/pop_art.png) | **Paper & Pen (Sketch)**<br>![Paper Pen](docs/designs/paper_pen.png) |
+| **8-Bit Retro**<br>![8-Bit](docs/designs/8-bit.png) | **Glitch Art**<br>![Glitch](docs/designs/glitch.png) |
+| **VHS Tape**<br>![VHS](docs/designs/vsh.png) | **Xerox Punk**<br>![Xerox](docs/designs/xerox_punk.png) |
+| **Thermal Vision**<br>![Thermal](docs/designs/thermo.png) | **X-Ray**<br>![X-Ray](docs/designs/x-ray.png) |
+| **Airport Flip Board**<br>![Flip Board](docs/designs/flip_board.png) | **Sonar**<br>![Sonar](docs/designs/sonar.png) |
+| **Las Vegas**<br>![Vegas](docs/designs/vegas.png) | **E-Ink**<br>![E-Ink](docs/designs/e-ink.png) |
+| **Medieval Dungeon**<br>![DND](docs/designs/dnd.png) | |
 
 ---
 

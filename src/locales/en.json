@@ -320,18 +320,24 @@
     "welcome": {
         "title": "Welcome to MONEO",
         "description": "See your spending clearly. Plan calmly.",
+        "heroTitle": "Welcome",
+        "heroSubtitle": "Take the first step towards financial freedom.",
+        "brandTagline": "Personal finance management is now much smarter,<br />simpler, and aesthetic.",
+        "startSetup": "Start Setup",
+        "skipSetup": "Skip and Start with Defaults",
+        "localStorage": "Local Storage & Privacy Focused",
         "features": {
             "track": {
-                "title": "Clear Tracking",
-                "desc": "Manage daily expenses & income without the stress."
+                "title": "Track Expenses",
+                "desc": "See exactly where your money goes instantly."
             },
-            "analyze": {
-                "title": "Smart Insights",
-                "desc": "Get personalized advice from top AI models instantly."
+            "plan": {
+                "title": "Plan the Future",
+                "desc": "Create and track savings goals."
             },
             "secure": {
-                "title": "Privacy First",
-                "desc": "Your data stays on your device. 100% offline capable."
+                "title": "Total Security",
+                "desc": "Your data is stored encrypted on your device."
             }
         },
         "setup": {

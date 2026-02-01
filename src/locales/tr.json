@@ -320,18 +320,24 @@
     "welcome": {
         "title": "MONEO'ya Hoş Geldin",
         "description": "Harcamalarını net gör. Hedeflerini sakinlikle yönet.",
+        "heroTitle": "Hoş Geldin",
+        "heroSubtitle": "Finansal özgürlüğüne giden yolda ilk adımı at.",
+        "brandTagline": "Kişisel finans yönetimi artık çok daha akıllı,<br />basit ve estetik.",
+        "startSetup": "Kuruluma Başla",
+        "skipSetup": "Atla ve Varsayılanlarla Başla",
+        "localStorage": "Yerel Depolama & Gizlilik Odaklı",
         "features": {
             "track": {
-                "title": "Net Takip",
-                "desc": "Günlük gelir ve giderlerini stres olmadan yönet."
+                "title": "Harcamaları İzle",
+                "desc": "Nereye ne kadar harcadığını anında gör."
             },
-            "analyze": {
-                "title": "Akıllı İçgörüler",
-                "desc": "En güçlü yapay zeka modellerinden anında tavsiye al."
+            "plan": {
+                "title": "Geleceği Planla",
+                "desc": "Birikim hedefleri oluştur ve takip et."
             },
             "secure": {
-                "title": "Önce Gizlilik",
-                "desc": "Verilerin cihazından asla çıkmaz. %100 Çevrimdışı çalışır."
+                "title": "Tam Güvenlik",
+                "desc": "Verilerin cihazında şifreli saklanır."
             }
         },
         "setup": {

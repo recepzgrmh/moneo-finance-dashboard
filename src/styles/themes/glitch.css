@@ -1,0 +1,68 @@
+/* =========================================
+   3. GLITCH ART THEME (DİJİTAL BOZULMA)
+   ========================================= */
+[data-theme='glitch'] {
+    --bg-body: #121212;
+    --bg-sidebar: #050505;
+    --bg-card: #1a1a1a;
+    --bg-card-hover: #252525;
+
+    --primary: #00ffff;
+    /* Camgöbeği (Cyan) */
+    --secondary: #ff00ff;
+    /* Macenta */
+    --text-main: #ffffff;
+    --text-muted: #aaaaaa;
+
+    --border-color: #00ffff;
+    --glass-shine: transparent;
+
+    --radius-md: 0px;
+    --radius-lg: 0px;
+
+    --shadow-card: -2px 0 0 #ff00ff, 2px 0 0 #00ffff;
+    /* RGB Kayması */
+    --shadow-glow: none;
+
+    --font-main: 'Courier New', monospace;
+}
+
+/* Glitch Animasyonu */
+@keyframes glitch-skew {
+    0% {
+        transform: skew(0deg);
+    }
+
+    20% {
+        transform: skew(-2deg);
+    }
+
+    40% {
+        transform: skew(2deg);
+    }
+
+    60% {
+        transform: skew(-1deg);
+    }
+
+    80% {
+        transform: skew(1deg);
+    }
+
+    100% {
+        transform: skew(0deg);
+    }
+}
+
+[data-theme='glitch'] .stat-card:hover,
+[data-theme='glitch'] .section-card:hover {
+    animation: glitch-skew 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    background: #000;
+    border: 1px dashed var(--secondary);
+}
+
+[data-theme='glitch'] h1,
+[data-theme='glitch'] h2,
+[data-theme='glitch'] .stat-value {
+    text-shadow: 2px 0 var(--secondary), -2px 0 var(--primary);
+}

@@ -1,0 +1,66 @@
+/* =========================================
+   3. AIRPORT FLIP-BOARD (MEKANİK TABELA)
+   ========================================= */
+[data-theme='airport'] {
+    --bg-body: #111111;
+    --bg-sidebar: #080808;
+    --bg-card: #1a1a1a;
+    --bg-card-hover: #222222;
+
+    --primary: #d4af37;
+    /* Soluk sarı/altın */
+    --secondary: #ffffff;
+    --text-main: #eeeeee;
+    --text-muted: #777777;
+    --border-color: #333333;
+
+    --radius-md: 2px;
+    --shadow-card: inset 0 0 10px #000;
+    --font-main: 'Roboto Mono', monospace;
+}
+
+/* Kartların ortasından geçen çizgi (Mekanik ayrım) */
+[data-theme='airport'] .stat-card,
+[data-theme='airport'] .nav-item {
+    border-bottom: 2px solid #000;
+    background-image: linear-gradient(to bottom, #222 50%, #1a1a1a 50%);
+    background-size: 100% 4px;
+    /* Izgara görünümü */
+    position: relative;
+}
+
+[data-theme='airport'] .stat-value {
+    font-family: 'Courier Prime', monospace;
+    letter-spacing: 3px;
+    background: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Hover'da Flip Efekti */
+[data-theme='airport'] .stat-card:hover .stat-value {
+    animation: flip-digit 0.6s ease-in-out;
+    background: #333;
+}
+
+@keyframes flip-digit {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    50% {
+        transform: rotateX(90deg);
+        background: #555;
+    }
+
+    51% {
+        transform: rotateX(-90deg);
+        background: #000;
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}

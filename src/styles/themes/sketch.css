@@ -1,0 +1,78 @@
+/* =========================================
+   SKETCH THEME (KAĞIT & KALEM)
+   ========================================= */
+[data-theme='sketch'] {
+    /* Kağıt Rengi Arka Planlar */
+    --bg-body: #f8f5e6;
+    /* Krem rengi kağıt */
+    --bg-sidebar: #fffcf2;
+    --bg-card: #ffffff;
+    --bg-card-hover: #fdfbd8;
+    /* Hafif sarımsı post-it efekti */
+
+    /* Kalem Renkleri */
+    --primary: #2c3e50;
+    /* Kurşun kalem koyu gri */
+    --secondary: #e67e22;
+    /* Renkli kalem turuncu */
+    --success: #27ae60;
+    --danger: #c0392b;
+    --warning: #f39c12;
+
+    --text-main: #2c2c2c;
+    /* Tam siyah değil, karbon rengi */
+    --text-muted: #7f8c8d;
+
+    /* Titrek Kenarlık Rengi */
+    --border-color: #2c2c2c;
+
+    --glass-shine: transparent;
+
+    /* Wobbly (Titrek) Radius Değerleri - İşin sırrı burada */
+    --radius-md: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    --radius-lg: 25px 55px 35px 15px / 25px 15px 55px 35px;
+
+    /* Gölgeler - Hafif karalanmış gibi */
+    --shadow-card: 3px 3px 0px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.02);
+    --shadow-glow: none;
+
+    /* El Yazısı Fontu (Google Fonts'tan eklenmeli: 'Patrick Hand' veya 'Architects Daughter') */
+    --font-main: 'Patrick Hand', 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Sketch Spesifik Overrides */
+[data-theme='sketch'] body {
+    /* İsteğe bağlı: Buruşuk kağıt dokusu eklenebilir */
+    /* background-image: url('paper-texture.jpg'); */
+    background-blend-mode: multiply;
+}
+
+[data-theme='sketch'] .sidebar,
+[data-theme='sketch'] .stat-card,
+[data-theme='sketch'] .section-card,
+[data-theme='sketch'] .wallet-card,
+[data-theme='sketch'] .btn-glass,
+[data-theme='sketch'] .nav-item,
+[data-theme='sketch'] input {
+    /* Tüm kutulara titrek siyah kenarlık ekle */
+    border: 2px solid var(--border-color);
+    /* Hafif yamuk duruş efekti için */
+    transform: rotate(-0.5deg);
+    transition: all 0.3s ease;
+}
+
+[data-theme='sketch'] .stat-card:hover,
+[data-theme='sketch'] .section-card:hover,
+[data-theme='sketch'] .btn-glass:hover {
+    transform: rotate(0deg) scale(1.02);
+    background: var(--bg-card-hover);
+    /* Hover'da karalama gölgesi artar */
+    box-shadow: 5px 5px 0px rgba(44, 62, 80, 0.2);
+}
+
+[data-theme='sketch'] .progress-bar,
+[data-theme='sketch'] .w-progress-bg {
+    /* Progress barlar da elle çizilmiş gibi */
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+}

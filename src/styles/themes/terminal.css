@@ -1,0 +1,71 @@
+/* =========================================
+   1. RETRO TERMINAL THEME (HACKER)
+   ========================================= */
+[data-theme='terminal'] {
+    --bg-body: #000000;
+    --bg-sidebar: #0a0a0a;
+    --bg-card: #000000;
+    --bg-card-hover: #111111;
+
+    --primary: #33ff00;
+    /* Fosforlu Yeşil */
+    --secondary: #33ff00;
+    --success: #33ff00;
+    --danger: #ff0000;
+    --warning: #ffcc00;
+
+    --text-main: #33ff00;
+    --text-muted: #248f24;
+
+    --border-color: #33ff00;
+    --glass-shine: transparent;
+
+    --radius-md: 0px;
+    --radius-lg: 0px;
+
+    --shadow-card: none;
+    /* Terminalde gölge olmaz */
+    --shadow-glow: 0 0 10px rgba(51, 255, 0, 0.4);
+    /* Hafif CRT parlaması */
+
+    /* Terminal Fontu */
+    --font-main: 'Courier New', 'Courier', monospace;
+}
+
+[data-theme='terminal'] * {
+    text-transform: uppercase;
+    /* Her şey büyük harf */
+}
+
+[data-theme='terminal'] .sidebar,
+[data-theme='terminal'] .stat-card,
+[data-theme='terminal'] .section-card,
+[data-theme='terminal'] .btn-glass {
+    border: 1px solid var(--primary);
+    position: relative;
+}
+
+/* Kartların başına [ KART ] efekti */
+[data-theme='terminal'] .stat-card::before {
+    content: '[ SYSTEM_NODE ]';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: #000;
+    padding: 0 5px;
+    font-size: 0.7rem;
+    color: var(--primary);
+}
+
+/* Yanıp sönen imleç efekti */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+[data-theme='terminal'] h1::after,
+[data-theme='terminal'] h2::after {
+    content: '_';
+    animation: blink 1s step-end infinite;
+}

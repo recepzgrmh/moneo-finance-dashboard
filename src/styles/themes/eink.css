@@ -1,0 +1,63 @@
+/* =========================================
+   6. E-INK (KINDLE KAĞIDI)
+   ========================================= */
+[data-theme='eink'] {
+    --bg-body: #f4f4f4;
+    --bg-sidebar: #eeeeee;
+    --bg-card: #ffffff;
+    --bg-card-hover: #000000;
+    /* Hover'da ters renk */
+
+    --primary: #000000;
+    --secondary: #444444;
+    --text-main: #111111;
+    --text-muted: #555555;
+    --border-color: #000000;
+
+    --radius-md: 0px;
+    --shadow-card: none;
+    --font-main: 'Georgia', serif;
+    /* Serif font okumayı kolaylaştırır */
+}
+
+/* Pikselli Kenarlıklar */
+[data-theme='eink'] .stat-card,
+[data-theme='eink'] .btn-glass {
+    border: 2px solid black;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    /* Hafif gölge */
+    transition: none;
+    /* E-ink yavaştır, transition olmaz */
+}
+
+/* Ekran Yenileme Efekti (Flash) */
+[data-theme='eink'] .nav-item:active {
+    animation: eink-refresh 0.4s ease;
+}
+
+@keyframes eink-refresh {
+    0% {
+        background: white;
+        filter: invert(0);
+    }
+
+    50% {
+        background: black;
+        filter: invert(1);
+    }
+
+    /* Ekran kararır */
+    100% {
+        background: white;
+        filter: invert(0);
+    }
+}
+
+[data-theme='eink'] .stat-card:hover {
+    background: #000;
+    color: #fff;
+}
+
+[data-theme='eink'] .stat-card:hover * {
+    color: #fff !important;
+}

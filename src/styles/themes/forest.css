@@ -1,0 +1,8 @@
+/* Forest Specific Component Overrides */
+[data-theme='forest'] .stat-card,
+[data-theme='forest'] .section-card,
+[data-theme='forest'] .sidebar,
+[data-theme='forest'] .nav-item {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 6px 6px;
+}

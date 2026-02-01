@@ -1,0 +1,12 @@
+/* Ocean Specific Component Overrides */
+[data-theme='ocean'] .stat-card,
+[data-theme='ocean'] .section-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(51, 65, 85, 0.6));
+    background-size: 200% 200%;
+    transition: background-position 0.5s ease, transform 0.3s;
+}
+
+[data-theme='ocean'] .stat-card:hover,
+[data-theme='ocean'] .section-card:hover {
+    background-position: 100% 100%;
+}

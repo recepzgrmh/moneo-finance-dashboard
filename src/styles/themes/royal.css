@@ -1,0 +1,41 @@
+/* Royal Theme - Classic Luxury, Sharp, Defined */
+[data-theme='royal'] {
+    --bg-body: #0a0a0a;
+    --bg-sidebar: rgba(20, 20, 20, 0.95);
+    --bg-card: rgba(28, 28, 28, 0.8);
+    --bg-card-hover: rgba(40, 40, 40, 0.9);
+    --primary: #fbbf24;
+    /* Amber/Gold */
+    --primary-rgb: 251, 191, 36;
+    --secondary: #d97706;
+    /* Dark Gold */
+    --success: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --text-main: #ffffff;
+    --text-muted: #a3a3a3;
+    --border-color: rgba(212, 175, 55, 0.4);
+    --glass-shine: rgba(253, 230, 138, 0.05);
+    --radius-md: 2px;
+    --radius-lg: 2px;
+    --shadow-card: 0 4px 15px -5px rgba(251, 191, 36, 0.1);
+    --shadow-glow: 0 0 15px rgba(251, 191, 36, 0.2);
+    --font-main: 'Georgia', 'Times New Roman', serif;
+}
+
+[data-theme='royal'] .sidebar {
+    border-right: 1px solid rgba(251, 191, 36, 0.2);
+    background: #000000;
+}/* Royal Specific Component Overrides */
+[data-theme='royal'] .active .nav-item {
+  border: 1px solid var(--primary);
+  background: rgba(251, 191, 36, 0.05);
+}
+
+[data-theme='royal'] .stat-card:hover,
+[data-theme='royal'] .section-card:hover,
+[data-theme='royal'] .btn-glass:hover,
+[data-theme='royal'] .nav-item:hover {
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+  border-color: #fbbf24;
+}

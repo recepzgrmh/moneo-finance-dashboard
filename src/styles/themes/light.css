@@ -1,0 +1,41 @@
+/* Light Theme - Soft, Round, Shadowy */
+[data-theme='light'] {
+    --bg-body: #f1f5f9;
+    --bg-sidebar: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-hover: #ffffff;
+    --primary: #4f46e5;
+    --secondary: #f59e0b;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: transparent;
+    /* Card look relies on shadow */
+    --glass-shine: transparent;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-glow: none;
+    --font-main: 'Outfit', sans-serif;
+}[data-theme='light'] .sidebar {
+  border-right: none;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.02);
+}
+
+[data-theme='light'] .stat-card,
+[data-theme='light'] .section-card {
+  border: 1px solid #e2e8f0;
+}
+
+[data-theme='light'] .btn-glass {
+  background: white;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  box-shadow: var(--shadow-card);
+}
+
+[data-theme='light'] .btn-primary-glow {
+  background: var(--primary);
+  color: white;
+  border: none;
+}
+

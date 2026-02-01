@@ -1,0 +1,94 @@
+/* =========================================
+   8-BIT PIXEL ART THEME
+   ========================================= */
+[data-theme='8bit'] {
+    /* Retro Konsol Paleti (NES/Gameboy esintili) */
+    --bg-body: #2d1b00;
+    /* Koyu kahve/siyah zemin */
+    --bg-sidebar: #000000;
+    --bg-card: #f8d878;
+    /* Gameboy ekran sarısı/beji */
+    --bg-card-hover: #ffffff;
+
+    --primary: #e74c3c;
+    /* Mario Kırmızısı */
+    --secondary: #3498db;
+    /* Mega Man Mavisi */
+    --success: #2ecc71;
+    --danger: #e74c3c;
+    --warning: #f1c40f;
+
+    --text-main: #000000;
+    /* Kart içi yazılar siyah */
+    --text-muted: #5c4b21;
+
+    /* Piksel kenarlık rengi */
+    --border-color: #000000;
+    --glass-shine: transparent;
+
+    /* KESİNLİKLE YUVARLAMA YOK */
+    --radius-md: 0px;
+    --radius-lg: 0px;
+
+    /* Sert, blok gölge */
+    --shadow-card: 4px 4px 0px #000000;
+    --shadow-glow: none;
+
+    /* Piksel Font (Google Fonts'tan eklenmeli: 'Press Start 2P' veya 'VT323') */
+    --font-main: 'Press Start 2P', 'Courier New', monospace;
+}
+
+/* 8-Bit Spesifik Overrides */
+[data-theme='8bit'] .sidebar {
+    border-right: 4px solid var(--border-color);
+    background-image:
+        linear-gradient(45deg, #111 25%, transparent 25%),
+        linear-gradient(-45deg, #111 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #111 75%),
+        linear-gradient(-45deg, transparent 75%, #111 75%);
+    background-size: 20px 20px;
+    /* Arka plan piksel dokusu */
+}
+
+[data-theme='8bit'] .stat-card,
+[data-theme='8bit'] .section-card,
+[data-theme='8bit'] .wallet-card,
+[data-theme='8bit'] .btn-glass,
+[data-theme='8bit'] input {
+    border: none;
+    /* Normal border'ı kapat */
+    /* Box-shadow ile sahte 4px piksel kenarlık yapımı */
+    box-shadow:
+        0 4px 0 var(--border-color),
+        0 -4px 0 var(--border-color),
+        4px 0 0 var(--border-color),
+        -4px 0 0 var(--border-color),
+        4px 4px 0 var(--border-color);
+    /* Sonuncusu ana gölge */
+    margin: 4px;
+    /* Gölgeler taşmasın diye */
+}
+
+[data-theme='8bit'] .btn-glass:hover {
+    background: var(--primary);
+    color: white;
+    /* Hover'da gölge yer değiştirir, tıklama hissi verir */
+    box-shadow:
+        0 2px 0 var(--border-color),
+        0 -2px 0 var(--border-color),
+        2px 0 0 var(--border-color),
+        -2px 0 0 var(--border-color),
+        2px 2px 0 var(--border-color);
+    transform: translate(2px, 2px);
+}
+
+[data-theme='8bit'] .nav-item {
+    border: 2px solid transparent;
+}
+
+[data-theme='8bit'] .nav-item:hover,
+[data-theme='8bit'] .nav-item.active {
+    border: 2px solid var(--border-color);
+    background: var(--warning);
+    color: black;
+}

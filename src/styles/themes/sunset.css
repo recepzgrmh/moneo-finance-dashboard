@@ -1,0 +1,18 @@
+/* Sunset Specific Component Overrides */
+[data-theme='sunset'] .btn-glass,
+[data-theme='sunset'] .nav-item,
+[data-theme='sunset'] .user-profile div:first-child,
+[data-theme='sunset'] .sidebar-close-btn {
+    border-radius: 999px;
+}
+
+[data-theme='sunset'] .stat-card,
+[data-theme='sunset'] .section-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme='sunset'] .stat-card:hover,
+[data-theme='sunset'] .section-card:hover {
+    transform: translateY(-5px);
+    /* Enhanced float */
+}

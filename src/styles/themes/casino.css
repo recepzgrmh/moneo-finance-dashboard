@@ -1,0 +1,51 @@
+/* =========================================
+   7. CASINO SLOT (LAS VEGAS)
+   ========================================= */
+[data-theme='casino'] {
+    --bg-body: #2c0505;
+    /* Koyu Bordo */
+    --bg-sidebar: #4a0a0a;
+    --bg-card: #1a1a1a;
+    --bg-card-hover: #2a2a2a;
+
+    --primary: #ffcc00;
+    /* Altın */
+    --secondary: #ff0000;
+    /* Kırmızı */
+    --text-main: #ffffff;
+    --text-muted: #ffcc00;
+    --border-color: #ffcc00;
+
+    --radius-md: 12px;
+    --shadow-card: 0 0 10px #ffcc00;
+    --font-main: 'Arial Black', sans-serif;
+}
+
+/* Yanıp Sönen Işıklar Çerçevesi */
+[data-theme='casino'] .stat-card {
+    border: 3px solid #ffcc00;
+    background-image: radial-gradient(circle, transparent 20%, #000 20%, #000 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #000 20%, #000 80%, transparent 80%, transparent) 50px 50px;
+    background-color: #1a1a1a;
+}
+
+[data-theme='casino'] .stat-card:hover {
+    animation: casino-blink 0.5s infinite alternate;
+}
+
+@keyframes casino-blink {
+    from {
+        box-shadow: 0 0 10px #ffcc00, inset 0 0 10px #ffcc00;
+        border-color: #fff;
+    }
+
+    to {
+        box-shadow: 0 0 30px #ff0000, inset 0 0 20px #ff0000;
+        border-color: #ffcc00;
+    }
+}
+
+[data-theme='casino'] .stat-value::before {
+    content: "$";
+    color: #ffcc00;
+    margin-right: 5px;
+}

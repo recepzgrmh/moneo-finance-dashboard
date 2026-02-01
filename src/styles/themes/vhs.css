@@ -1,0 +1,79 @@
+/* =========================================
+   5. BROKEN VHS (BOZUK KASET)
+   ========================================= */
+[data-theme='vhs'] {
+    --bg-body: #1a1a1a;
+    --bg-sidebar: #111111;
+    --bg-card: #0d0d0d;
+    --bg-card-hover: #222;
+
+    --primary: #ff00ff;
+    /* Magenta */
+    --secondary: #00ffff;
+    /* Cyan */
+    --text-main: #dddddd;
+    --text-muted: #666666;
+    --border-color: #333;
+    --radius-md: 4px;
+    --font-main: 'Arial', sans-serif;
+}
+
+/* Tarama Çizgileri (Scanlines) */
+[data-theme='vhs'] body::after {
+    content: "PLAY >";
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: monospace;
+    font-size: 20px;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+[data-theme='vhs'] body::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 1000;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+/* Glitch Animasyonu (RGB Kayması) */
+[data-theme='vhs'] .stat-card:hover {
+    animation: glitch-anim 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+    color: white;
+}
+
+@keyframes glitch-anim {
+    0% {
+        transform: translate(0);
+        text-shadow: -2px 0 red, 2px 0 blue;
+    }
+
+    25% {
+        transform: translate(-2px, 2px);
+        text-shadow: -2px 0 blue, 2px 0 red;
+    }
+
+    50% {
+        transform: translate(2px, -2px);
+        text-shadow: 2px 0 red, -2px 0 blue;
+    }
+
+    75% {
+        transform: translate(-2px, -2px);
+        text-shadow: -2px 0 blue, 2px 0 red;
+    }
+
+    100% {
+        transform: translate(0);
+        text-shadow: -2px 0 red, 2px 0 blue;
+    }
+}

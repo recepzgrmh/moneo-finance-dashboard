@@ -268,10 +268,19 @@ function App() {
         <div className="ambient-glow glow-2"></div>
         <main className="main-content" style={{ width: '100%' }}>
           <WelcomeScreen
-            onGetStarted={(selectedCurrency) => {
+            onUpdateTheme={setTheme}
+            onGetStarted={(data) => {
               setIsFirstVisit(false);
-              setCurrency(selectedCurrency);
-              setCurrentView('import');
+              // Handle legacy string pass or new object pass
+              if (typeof data === 'string') {
+                setCurrency(data);
+              } else {
+                if (data.currency) setCurrency(data.currency);
+                if (data.theme) setTheme(data.theme);
+                if (data.userProfile) setUserProfile(prev => ({ ...prev, ...data.userProfile }));
+              }
+              // Go to overview instead of import for smoother entry
+              setCurrentView('overview');
             }}
             onSkip={() => setIsFirstVisit(false)}
           />

@@ -1,0 +1,68 @@
+/* =========================================
+   9. SONAR / RADAR (DENİZALTI)
+   ========================================= */
+[data-theme='sonar'] {
+    --bg-body: #001100;
+    /* Çok koyu yeşil/siyah */
+    --bg-sidebar: #002200;
+    --bg-card: rgba(0, 34, 0, 0.5);
+    --bg-card-hover: rgba(0, 50, 0, 0.8);
+
+    --primary: #00ff00;
+    /* Radar Yeşili */
+    --secondary: #008800;
+    --text-main: #00ff00;
+    --text-muted: #005500;
+    --border-color: #004400;
+
+    --radius-md: 50%;
+    /* Yuvarlak hatlar */
+    --shadow-card: 0 0 10px #00ff00;
+    --font-main: 'VT323', monospace;
+}
+
+[data-theme='sonar'] body {
+    /* Radar Izgarası */
+    background-image:
+        linear-gradient(#003300 1px, transparent 1px),
+        linear-gradient(90deg, #003300 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Dönen Radar Çizgisi */
+[data-theme='sonar'] body::after {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150vw;
+    height: 150vw;
+    transform: translate(-50%, -50%);
+    background: conic-gradient(transparent 80%, rgba(0, 255, 0, 0.3) 100%);
+    border-radius: 50%;
+    animation: radar-sweep 4s infinite linear;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes radar-sweep {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+[data-theme='sonar'] .stat-card {
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 5px #00ff00;
+    border-radius: 12px;
+}
+
+/* Hedef tespiti efekti */
+[data-theme='sonar'] .stat-card:hover {
+    background: #003300;
+    box-shadow: 0 0 20px #00ff00, inset 0 0 20px #00ff00;
+}

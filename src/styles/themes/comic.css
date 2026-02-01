@@ -1,0 +1,86 @@
+/* =========================================
+   COMIC BOOK / POP ART THEME
+   ========================================= */
+[data-theme='comic'] {
+    --bg-body: #ffffff;
+    --bg-sidebar: #ffecec;
+    /* Çok açık pembe */
+    --bg-card: #ffffff;
+    --bg-card-hover: #fff0c4;
+    /* Açık sarı */
+
+    /* CMYK Esintili Canlı Renkler */
+    --primary: #00AEEF;
+    /* Cyan Mavisi */
+    --secondary: #EC008C;
+    /* Magenta Pembesi */
+    --success: #8DC63F;
+    --danger: #ED1C24;
+    --warning: #FFF200;
+    /* Parlak Sarı */
+
+    --text-main: #000000;
+    --text-muted: #444444;
+
+    --border-color: #000000;
+    --glass-shine: transparent;
+
+    /* Çizgi roman paneli gibi */
+    --radius-md: 2px;
+    --radius-lg: 4px;
+
+    /* Sert çizgi gölge */
+    --shadow-card: 5px 5px 0px #000000;
+    --shadow-glow: none;
+
+    /* Çizgi Roman Fontu (Google Fonts: 'Bangers', 'Comic Neue') */
+    --font-main: 'Bangers', 'Comic Sans MS', cursive;
+    letter-spacing: 1px;
+}
+
+/* Comic Overrides */
+[data-theme='comic'] body {
+    /* Halftone (Noktalı Baskı) Arka Plan Efekti */
+    background-image: radial-gradient(circle, #000000 10%, transparent 11%), radial-gradient(circle, #000000 10%, transparent 11%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 0.1;
+    /* Çok baskın olmaması için */
+}
+
+/* İçerik okunsun diye body'ye tekrar beyaz zemin atıyoruz */
+[data-theme='comic'] #root {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme='comic'] .sidebar,
+[data-theme='comic'] .stat-card,
+[data-theme='comic'] .section-card,
+[data-theme='comic'] .btn-glass {
+    /* Kalın "mürekkepli" çerçeve */
+    border: 3px solid #000000;
+}
+
+[data-theme='comic'] .stat-label,
+[data-theme='comic'] .header-subtitle {
+    /* Alt başlıklar için daha okunaklı bir font */
+    font-family: 'Comic Neue', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+[data-theme='comic'] .stat-card:hover,
+[data-theme='comic'] .section-card:hover {
+    /* Hover'da "BAM!" efekti gibi hafif dönme */
+    transform: rotate(-2deg) scale(1.05);
+    background: var(--warning);
+    /* Sarıya dönsün */
+    box-shadow: 7px 7px 0px #000000;
+    z-index: 10;
+}
+
+[data-theme='comic'] .btn-glass {
+    background: var(--primary);
+    color: white;
+    text-transform: uppercase;
+}

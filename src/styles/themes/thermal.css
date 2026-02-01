@@ -1,0 +1,66 @@
+/* =========================================
+   2. THERMAL VISION (PREDATOR)
+   ========================================= */
+[data-theme='thermal'] {
+    --bg-body: #0a001a;
+    /* Çok koyu mor */
+    --bg-sidebar: #15002a;
+    --bg-card: #220044;
+    --bg-card-hover: #ff0000;
+    /* Hover'da en sıcak renk */
+
+    --primary: #ff0000;
+    --secondary: #ff9900;
+    --success: #ffff00;
+    --text-main: #00ffcc;
+    /* Soğuk bölgeler */
+    --text-muted: #0055aa;
+    --border-color: #440088;
+
+    --radius-md: 4px;
+    --shadow-card: 0 0 15px rgba(34, 0, 68, 0.5);
+    --font-main: 'Consolas', monospace;
+}
+
+[data-theme='thermal'] body {
+    /* Isı haritası gradyanı */
+    background: radial-gradient(circle at center, #2a0033 0%, #000011 100%);
+}
+
+[data-theme='thermal'] .stat-card {
+    transition: background 0.5s ease, color 0.2s;
+}
+
+/* Hover'da ısı artışı simülasyonu */
+[data-theme='thermal'] .stat-card:hover {
+    background: linear-gradient(135deg, #ff0000, #ff9900, #ffff00);
+    box-shadow: 0 0 30px #ff0000;
+    border-color: #ffff00;
+}
+
+[data-theme='thermal'] .stat-card:hover .stat-value,
+[data-theme='thermal'] .stat-card:hover .stat-label {
+    color: #000 !important;
+    /* Sıcak zeminde siyah yazı */
+    font-weight: bold;
+}
+
+/* Nabız gibi atan ısı göstergesi */
+@keyframes heat-pulse {
+    0% {
+        box-shadow: 0 0 5px #ff0000;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #ffff00;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #ff0000;
+    }
+}
+
+[data-theme='thermal'] .btn-primary-glow {
+    background: #ff0000;
+    animation: heat-pulse 2s infinite;
+}
