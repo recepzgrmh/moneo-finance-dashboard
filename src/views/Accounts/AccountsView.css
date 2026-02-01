@@ -1,0 +1,121 @@
+.wallet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.wallet-card {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.wallet-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary);
+}
+
+.wallet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.bank-logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.bank-logo.bank-cash {
+    font-size: 1.5rem;
+    color: var(--success);
+}
+
+.bank-type {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.action-btn-group {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.edit-btn {
+    padding: 0.3rem 0.5rem;
+    min-width: auto;
+}
+
+.save-btn {
+    padding: 0.3rem;
+    min-width: auto;
+    color: var(--success);
+}
+
+.cancel-btn {
+    padding: 0.3rem;
+    min-width: auto;
+    color: var(--danger);
+}
+
+.balance-input {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.debt-amount {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.limit-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.limit-info-center {
+    justify-content: center;
+}
+
+.w-progress-bg {
+    width: 100%;
+    height: 8px;
+    background: var(--bg-main);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.w-progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.progress-success {
+    background: var(--success);
+}
+
+.progress-warning {
+    background: var(--warning);
+}
+
+.progress-danger {
+    background: var(--danger);
+}

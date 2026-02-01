@@ -1,0 +1,240 @@
+.import-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.import-card {
+    cursor: pointer;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.import-card:hover {
+    transform: translateY(-5px);
+}
+
+.import-card.pdf:hover {
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+}
+
+.import-card.json:hover {
+    border-color: var(--success);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+}
+
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.icon-wrapper.pdf {
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.icon-wrapper.json {
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.card-badge {
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.card-badge.pdf {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary);
+}
+
+.card-badge.json {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+.badge-icon {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Sections */
+.section-content {
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.section-header {
+    margin-bottom: 1.5rem;
+}
+
+.header-icon {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+}
+
+.error-message {
+    color: var(--danger);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.processing-container {
+    margin-top: 2rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+.spinner {
+    margin-bottom: 1rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.preview-box {
+    background: var(--bg-card-hover);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.preview-code {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.bank-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.bank-item {
+    padding: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.confirmation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.confirm-card {
+    cursor: pointer;
+    padding: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.confirm-card:hover {
+    transform: scale(1.02);
+}
+
+.warning-badge {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: rgba(245, 158, 11, 0.1);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: var(--warning);
+}
+
+.success-badge {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: var(--success);
+}
+
+.success-container {
+    margin-top: 2rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+.success-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: rgba(16, 185, 129, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.error-container {
+    margin-top: 2rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+.error-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: rgba(239, 68, 68, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}

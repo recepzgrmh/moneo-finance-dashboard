@@ -1,0 +1,163 @@
+// This file contains the 6 new widget components to be added to Dashboard.jsx
+// Insert these RIGHT BEFORE the closing </ResponsiveGridLayout> tag (before line 566)
+
+{/* Daily Heatmap */}
+{vis
+
+ibleWidgets.includes('daily-heatmap') && (
+    <div key="daily-heatmap" className={`grid-item-container ${isEditMode ? 'edit-active no-select' : ''}`}>
+        {isEditMode && (
+            <>
+                <div className="drag-handle"><Layout size={16} /></div>
+                <button className="card-delete-btn" onClick={() => removeWidget('daily-heatmap')}><X size={14} /></button>
+            </>
+        )}
+        <SectionCard
+            title={<><Calendar size={18} /> {t('dashboard.dailyHeatmap')}</>}
+            className="chart-section-card"
+        >
+            <div className="note-text" style={{ marginBottom: '1rem', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+                {t('dashboard.heatmapDesc')}
+            </div>
+            {dailyHeatmapData && dailyHeatmapData.length > 0 ? (
+                <div style={{ height: '200px' }}>
+                    <div className="weekday-labels" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.75rem' }}>
+                        {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day, idx) => (
+                            <span key={idx} style={{ height: '25px', display: 'flex', alignItems: 'center' }}>{day}</span>
+                        ))}
+                    </div>
+                </div>
+            ) : (
+                <div className="empty-chart-msg">{t('dashboard.noDataForHeat map')}</div>
+            )}
+        </SectionCard>
+    </div>
+)}
+
+{/* Year Comparison */}
+{visibleWidgets.includes('year-comparison') && (
+    <div key="year-comparison" className={`grid-item-container ${isEditMode ? 'edit-active no-select' : ''}`}>
+        {isEditMode && (
+            <>
+                <div className="drag-handle"><Layout size={16} /></div>
+                <button className="card-delete-btn" onClick={() => removeWidget('year-comparison')}><X size={14} /></button>
+            </>
+        )}
+        <SectionCard
+            title={<><TrendingUp size={18} /> {t('dashboard.yearComparison')}</>}
+            className="chart-section-card"
+        >
+            <Bar data={yearComparisonData} options={chartOptions} />
+        </SectionCard>
+    </div>
+)}
+
+{/* Expense Forecast */}
+{visibleWidgets.includes('expense-forecast') && (
+    <div key="expense-forecast" className={`grid-item-container ${isEditMode ? 'edit-active no-select' : ''}`}>
+        {isEditMode && (
+            <>
+                <div className="drag-handle"><Layout size={16} /></div>
+                <button className="card-delete-btn" onClick={() => removeWidget('expense-forecast')}><X size={14} /></button>
+            </>
+        )}
+        <SectionCard
+            title={<><TrendingUp size={18} /> {t('dashboard.expenseForecast')}</>}
+            className="chart-section-card prediction-card"
+        >
+            <div className="prediction-value">
+                {formatCurrency(expenseForecast.predicted, privacyMode, currentLocale, currency)}
+            </div>
+            <div className="prediction-range" style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>
+                {formatCurrency(expenseForecast.min, privacyMode, currentLocale, currency)} - {formatCurrency(expenseForecast.max, privacyMode, currentLocale, currency)}
+            </div>
+            <div className="prediction-label" style={{ fontSize: '0.75rem', marginTop: '0.5rem' }}>
+                📊 {t('dashboard.forecastConfidence', { percent: Math.round(expenseForecast.confidence * 100) })}
+            </div>
+        </SectionCard>
+    </div>
+)}
+
+{/* Budget Depletion */}
+{visibleWidgets.includes('budget-depletion') && (
+    <div key="budget-depletion" className={`grid-item-container ${isEditMode ? 'edit-active no-select' : ''}`}>
+        {isEditMode && (
+            <>
+                <div className="drag-handle"><Layout size={16} /></div>
+                <button className="card-delete-btn" onClick={() => removeWidget('budget-depletion')}><X size={14} /></button>
+            </>
+        )}
+        <SectionCard
+            title={<><Clock size={18} /> {t('dashboard.budgetDepletion')}</>}
+            className={`chart-section-card prediction-card ${budgetDepletion.isOnTrack ? '' : 'warning'}`}
+        >
+            <div className="prediction-value" style={{ color: budgetDepletion.daysLeft < 7 ? 'var(--danger)' : 'inherit' }}>
+                {budgetDepletion.daysLeft} {t('dashboard.daysRemaining')}
+            </div>
+            <div className="budget-progress" style={{ marginTop: '1rem' }}>
+                <div className="progress-bar" style={{ height: '8px', background: 'var(--border-color)', borderRadius: '4px', overflow: 'hidden' }}>
+                    <div style={{
+                        width: `${Math.min(budgetDepletion.percentUsed, 100)}%`,
+                        height: '100%',
+                        background: budgetDepletion.percentUsed > 90 ? 'var(--danger)' : budgetDepletion.percentUsed > 70 ? 'var(--warning)' : 'var(--success)',
+                        transition: 'width 0.3s'
+                    }}></div>
+                </div>
+                <div style={{ fontSize: '0.75rem', marginTop: '0.5rem', color: 'var(--text-muted)' }}>
+                    {Math.round(budgetDepletion.percentUsed)}% {t('dashboard.used')}
+                </div>
+            </div>
+        </SectionCard>
+    </div>
+)}
+
+{/* Goal Prediction */}
+{visibleWidgets.includes('goal-prediction') && goalPrediction && (
+    <div key="goal-prediction" className={`grid-item-container ${isEditMode ? 'edit-active no-select' : ''}`}>
+        {isEditMode && (
+            <>
+                <div className="drag-handle"><Layout size={16} /></div>
+                <button className="card-delete-btn" onClick={() => removeWidget('goal-prediction')}><X size={14} /></button>
+            </>
+        )}
+        <SectionCard
+            title={<><Target size={18} /> {t('dashboard.goalPrediction')}</>}
+            className="chart-section-card prediction-card"
+        >
+            <div className="prediction-value">
+                {goalPrediction.monthsRemaining} {t('dashboard.monthsRemaining')}
+            </div>
+            <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>
+                📅 {new Date(goalPrediction.completionDate).toLocaleDateString(currentLocale, { year: 'numeric', month: 'long' })}
+            </div>
+        </SectionCard>
+    </div>
+)}
+
+{/* Income Projection */}
+{visibleWidgets.includes('income-projection') && (
+    <div key="income-projection" className={`grid-item-container ${isEditMode ? 'edit-active no-select' : ''}`}>
+        {isEditMode && (
+            <>
+                <div className="drag-handle"><Layout size={16} /></div>
+                <button className="card-delete-btn" onClick={() => removeWidget('income-projection')}><X size={14} /></button>
+            </>
+        )}
+        <SectionCard
+            title={<><TrendingDown size={18} /> {t('dashboard.incomeProjection')}</>}
+            className="chart-section-card"
+        >
+            <Line data={{
+                labels: incomeProjection.map(p => new Date(p.month).toLocaleDateString(currentLocale, { month: 'short' })),
+                datasets: [{
+                    label: t('dashboard.projectedNet'),
+                    data: incomeProjection.map(p => p.net),
+                    borderColor: palette[0],
+                    backgroundColor: `${palette[0]}33`,
+                    fill: true,
+                    borderDash: [5, 5]
+                }]
+            }} options={chartOptions} />
+        </SectionCard>
+    </div>
+)}

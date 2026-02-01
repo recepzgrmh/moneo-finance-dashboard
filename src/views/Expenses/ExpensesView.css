@@ -1,0 +1,46 @@
+.month-selector-mb {
+    margin-bottom: 2rem;
+}
+
+.summary-stats-mb {
+    margin-bottom: 2rem;
+}
+
+.category-breakdown-mb {
+    margin-bottom: 2rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.category-card {
+    background: var(--bg-card-hover);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.category-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.category-name {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+}
+
+.category-amount {
+    font-weight: 600;
+    color: var(--danger);
+}
+
+.empty-expenses {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-muted);
+}

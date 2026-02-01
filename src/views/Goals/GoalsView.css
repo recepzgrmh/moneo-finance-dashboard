@@ -1,0 +1,140 @@
+.deposit-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.deposit-card {
+    width: 400px;
+    max-width: 90%;
+    animation: fadeIn 0.2s;
+    margin: 0;
+}
+
+.deposit-input {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.deposit-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.goals-form-card {
+    margin-bottom: 2rem;
+    border: 1px solid var(--primary);
+}
+
+.goals-form-grid {
+    display: grid;
+    grid-template-columns: minmax(150px, 1fr) 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.goals-form-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.goals-form-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+.goal-hero h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+.goal-hero-days {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.goal-progress-hero {
+    margin: 2rem auto;
+    height: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.goal-progress-bar-hero {
+    height: 100%;
+    background-color: var(--success);
+    /* Default, overridden by JS logic usually */
+    border-radius: 999px;
+    transition: width 0.5s ease;
+}
+
+.custom-goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.goal-item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.goal-title-wrapper {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.goal-delete-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.goal-amount-display {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.goal-amount-target {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.goal-progress-transition {
+    transition: width 0.5s ease;
+}
+
+.goal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.goal-status-text {
+    font-size: 0.8rem;
+}
+
+.goal-add-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+}

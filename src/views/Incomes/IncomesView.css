@@ -1,0 +1,17 @@
+.month-selector-mb {
+    margin-bottom: 2rem;
+}
+
+.summary-stats-mb {
+    margin-bottom: 2rem;
+}
+
+.empty-incomes {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-muted);
+}
+
+.t-icon-wrapper {
+    background: rgba(16, 185, 129, 0.2);
+}

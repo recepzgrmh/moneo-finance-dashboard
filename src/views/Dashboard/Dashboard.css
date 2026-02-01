@@ -1,0 +1,219 @@
+.month-selector {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.month-nav-btn {
+    padding: 0.3rem 0.5rem;
+    min-width: auto;
+}
+
+.month-label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    min-width: 140px;
+    text-align: center;
+}
+
+.stats-grid-container {
+    height: 100%;
+    margin: 0;
+    display: block;
+}
+
+.chart-section-card {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.insights-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.empty-insights {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.empty-insights-content {
+    opacity: 0.5;
+}
+
+.salary-limit-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1rem;
+    flex: 1;
+}
+
+.salary-info-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.salary-date-val {
+    font-weight: 600;
+}
+
+.salary-limit-val {
+    font-weight: 600;
+    color: var(--warning);
+}
+
+.salary-progress-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.salary-progress-text {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.salary-balance-row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.goal-reward-container {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.goal-reward-content {
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.goal-days-left {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+    line-height: 1;
+}
+
+.goal-days-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+}
+
+.goal-dates-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+.goal-date-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+}
+
+.goal-date-val {
+    color: var(--text-main);
+}
+
+.list-section-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.list-day-count {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.empty-list-msg {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+}
+
+.scrollable-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Advanced Analytics Styling */
+.prediction-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1rem !important;
+}
+
+.prediction-card.warning .prediction-value {
+    color: var(--danger) !important;
+    text-shadow: 0 0 15px rgba(239, 68, 68, 0.2);
+}
+
+.prediction-value {
+    letter-spacing: -0.02em;
+    transition: all 0.3s ease;
+}
+
+.progress-bar-container {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.note-text {
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+.empty-chart-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.weekday-labels {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    z-index: 10;
+}
+
+.chart-section-card canvas {
+    transition: filter 0.3s ease;
+}
+
+.grid-item-container:hover .prediction-value {
+    transform: scale(1.05);
+}
