@@ -2,8 +2,9 @@ import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout/legacy';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
-import { Chart as ChartJS, ArcElement, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, Filler } from 'chart.js';
+import { Chart as ChartJS, ArcElement, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, Filler, TimeScale } from 'chart.js';
 import { MatrixController, MatrixElement } from 'chartjs-chart-matrix';
+import 'chartjs-adapter-date-fns';
 import { Doughnut, Bar, Line, Chart } from 'react-chartjs-2';
 import { ChevronLeft, ChevronRight, AlertTriangle, TrendingUp, Zap, ShieldCheck, Info, Bell, Clock, PieChart, CheckCircle2, Activity, Layout, RotateCcw, X, Upload, Calendar, Target, TrendingDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -16,7 +17,7 @@ import SectionCard from '../../components/common/SectionCard';
 import TransactionItem from '../../components/common/TransactionItem';
 import './Dashboard.css';
 
-ChartJS.register(ArcElement, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, Filler, MatrixController, MatrixElement);
+ChartJS.register(ArcElement, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, Filler, MatrixController, MatrixElement, TimeScale);
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
